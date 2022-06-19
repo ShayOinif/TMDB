@@ -4,7 +4,6 @@ import android.app.Application
 import edu.giniapps.day23.networking.buildRemoteApi
 
 class AppManager : Application() {
-
     companion object {
         private lateinit var instace: AppManager
 
@@ -12,6 +11,7 @@ class AppManager : Application() {
             buildRemoteApi()
         }
     }
+
     override fun onCreate() {
         super.onCreate()
 
