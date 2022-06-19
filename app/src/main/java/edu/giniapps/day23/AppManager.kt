@@ -5,16 +5,16 @@ import edu.giniapps.day23.networking.buildRemoteApi
 
 class AppManager : Application() {
     companion object {
-        private lateinit var instace: AppManager
+        //private lateinit var instance: AppManager
 
         val remoteApi by lazy {
             buildRemoteApi()
         }
     }
 
-    override fun onCreate() {
+    /*override fun onCreate() {
         super.onCreate()
 
-        instace = this
-    }
+        instance = this
+    }*/
 }
