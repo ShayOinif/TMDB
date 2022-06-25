@@ -3,52 +3,58 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:backgroundTint="#212121"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/black_primary"
     app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp">
+        android:paddingHorizontal="@dimen/layout_padding"
+        android:paddingVertical="8dp"
+        >
 
         <TextView
             android:id="@+id/movie_item_view_title_text_view"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textSize="20sp"
-            app:autoSizeMaxTextSize="40sp"
+            android:layout_height="0dp"
             app:autoSizeTextType="uniform"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Batman" />
+            tools:text="Spiderman" />
 
         <ImageView
             android:id="@+id/movie_item_view_poster_image_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginVertical="8dp"
             android:importantForAccessibility="no"
-            android:scaleType="centerInside"
-            app:layout_constraintBottom_toTopOf="@id/movie_item_view_rating_rating_bar"
-            app:layout_constraintDimensionRatio="w, 9:16"
+            style="@style/TmdbPosterImageViewStyle"
+            app:layout_constraintBottom_toTopOf="@id/movie_item_genre_text_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/movie_item_view_title_text_view" />
-
+            app:layout_constraintTop_toBottomOf="@id/movie_item_view_title_text_view"
+            tools:src="@drawable/spiderman" />
 
         <RatingBar
-            android:id="@+id/movie_item_view_rating_rating_bar"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:isIndicator="true"
-            android:numStars="5"
-            android:stepSize="0.1"
+            android:id="@+id/movie_item_view_average_vote_rating_bar"
+            style="@style/TmdbRatingBarStyle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:rating="5" />
+            app:layout_constraintTop_toTopOf="@+id/movie_item_genre_text_view"
+            tools:rating="3" />
+
+        <TextView
+            android:id="@+id/movie_item_genre_text_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:autoSizeTextType="uniform"
+            tools:text="Action"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movie_item_view_average_vote_rating_bar"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -1,9 +1,16 @@
 <resources>
-    <string name="app_name">Day23</string>
-    <string name="title_home">Home</string>
+    <string name="app_name">TMDB</string>
+    <string name="home_navigation_text">Home</string>
     <string name="home_fragment_title">Browse content</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="home_fragment_loading_text">Loading…</string>
-    <string name="reload_button_speakable">Reload button</string>
+    <string name="movie_detail_fragment_title">Details</string>
+    <string name="favorites_fragment_title">Favorites</string>
+    <string name="network_error_message">No connection</string>
+    <string name="try_again_message">Try again?</string>
+    <string name="server_error_message">Server error, try again later</string>
+    <string name="internal_error_message">Internal error</string>
+    <string name="reload_all_message">Reload app</string>
+    <string name="app_broken_message">Something went wrong, contact support</string>
+    <string name="contact_support_message">Contact support</string>
+    <string name="popular_movies_category">Popular Movies</string>
+    <string name="now_playing_movies_category">Now Playing Movies</string>
 </resources>

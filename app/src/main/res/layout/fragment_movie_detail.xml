@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TmdbFragmentStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.giniapps.tmdb.ui.moviedetail.MovieDetailFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/movie_detail_fragment_title_guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/movie_detail_fragment_poster_image_view"
+        style="@style/TmdbPosterImageViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@id/movie_detail_fragment_title_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/spiderman" />
+
+    <TextView
+        android:id="@+id/movie_detail_fragment_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:paddingHorizontal="@dimen/layout_padding"
+        app:autoSizeMaxTextSize="32sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/movie_detail_fragment_title_guideline"
+        app:layout_constraintEnd_toStartOf="@id/movie_detail_fragment_favorite_button"
+        app:layout_constraintStart_toEndOf="@id/movie_detail_fragment_poster_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Spiderman" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/movie_detail_fragment_favorite_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="@id/movie_detail_fragment_title_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/ic_baseline_not_favorite_24" />
+
+
+    <FrameLayout
+        android:id="@+id/movie_detail_fragment_trailer_frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_title_guideline" />
+
+    <RatingBar
+        android:id="@+id/movie_detail_fragment_rating_rating_bar"
+        style="@style/TmdbRatingBarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_detail_fragment_trailer_frame_layout"
+        tools:rating="3.5" />
+
+    <TextView
+        android:id="@+id/movie_detail_fragment_year_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@id/movie_detail_fragment_rating_rating_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_detail_fragment_trailer_frame_layout"
+        app:layout_constraintBottom_toBottomOf="@id/movie_detail_fragment_rating_rating_bar"
+        tools:text="1984" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_rating_rating_bar">
+
+        <TextView
+            android:id="@+id/movie_detail_fragment_overview_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            tools:text="This is spider/man!" />
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

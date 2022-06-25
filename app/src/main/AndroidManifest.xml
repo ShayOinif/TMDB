@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="edu.giniapps.day23">
+    package="edu.giniapps.tmdb">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
     <application
+        android:name="edu.giniapps.tmdb.TmdbApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Day23"
+        android:theme="@style/Theme.TMDB"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="edu.giniapps.tmdb.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,5 +30,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
