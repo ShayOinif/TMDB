@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import edu.giniapps.tmdb.R
 import edu.giniapps.tmdb.databinding.ViewMovieItemBinding
-import edu.giniapps.tmdb.models.response.MovieWithGenres
+import edu.giniapps.tmdb.models.MovieWithGenres
 import edu.giniapps.tmdb.ui.home.HomeViewModel
 import java.lang.ref.WeakReference
 

@@ -46,7 +46,8 @@ data class Movie(
     @ColumnInfo(name = "vote_average")
     private val _voteAverage: Float,
     override val popularity: Double,
-    var category: Int = NO_CATEGORY
+    var category: Int = NO_CATEGORY,
+    var favorite: Boolean = false
 
 ) : TmdbItem {
     @IgnoredOnParcel

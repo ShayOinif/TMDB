@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -80,11 +79,12 @@ class HomeFragment : Fragment() {
 
                 homeViewModel.acknowledgeNavigation()
 
-                findNavController().navigate(
+                // TODO: Change
+                /*findNavController().navigate(
                     HomeFragmentDirections.actionNavigationHomeToMovieDetailFragment(
                         movieWithGenre.movie.id
                     )
-                )
+                )*/
             }
         }
     }

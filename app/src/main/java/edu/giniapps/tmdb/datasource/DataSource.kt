@@ -1,8 +1,8 @@
 package edu.giniapps.tmdb.datasource
 
+import edu.giniapps.tmdb.models.MovieWithGenres
 import edu.giniapps.tmdb.models.response.Genre
 import edu.giniapps.tmdb.models.response.Movie
-import edu.giniapps.tmdb.models.response.MovieWithGenres
 import kotlinx.coroutines.flow.Flow
 
 interface DataSource {
@@ -19,4 +19,6 @@ interface DataSource {
     suspend fun deleteNowPlayingMovies(): Result<Unit>
 
     suspend fun deleteGenres(): Result<Unit>
+
+    /*suspend fun getMovieById(id: Int): Flow<Result<MovieWithGenres?>>*/
 }

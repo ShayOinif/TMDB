@@ -1,6 +1,6 @@
 package edu.giniapps.tmdb.repository
 
-import edu.giniapps.tmdb.models.response.MovieWithGenres
+import edu.giniapps.tmdb.models.MovieWithGenres
 import kotlinx.coroutines.flow.Flow
 
 interface Repository {

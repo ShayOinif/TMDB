@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "Day23"
+rootProject.name = "TMDB"
 include ':app'

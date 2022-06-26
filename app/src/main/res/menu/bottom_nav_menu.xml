@@ -4,4 +4,9 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/home_navigation_text" />
+
+    <item
+        android:id="@+id/navigation_paging"
+        android:icon="@drawable/ic_baseline_pages_24"
+        android:title="Paging" />
 </menu>

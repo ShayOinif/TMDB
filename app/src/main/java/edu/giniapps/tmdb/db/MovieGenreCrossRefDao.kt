@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import edu.giniapps.tmdb.models.response.MovieGenre
+import edu.giniapps.tmdb.models.MovieGenre
 import kotlinx.coroutines.flow.Flow
 
 @Dao

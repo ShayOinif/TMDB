@@ -26,4 +26,9 @@
             android:name="movieId"
             app:argType="long" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_paging"
+        android:name="edu.giniapps.tmdb.ui.paging.PagingFragment"
+        android:label="Paging"
+        tools:layout="@layout/fragment_paging" />
 </navigation>

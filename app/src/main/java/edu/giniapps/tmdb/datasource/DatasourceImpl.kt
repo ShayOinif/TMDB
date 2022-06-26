@@ -3,12 +3,12 @@ package edu.giniapps.tmdb.datasource
 import edu.giniapps.tmdb.db.GenreDao
 import edu.giniapps.tmdb.db.MovieDao
 import edu.giniapps.tmdb.db.MovieGenreCrossRefDao
+import edu.giniapps.tmdb.models.MovieGenre
 import edu.giniapps.tmdb.models.TmdbInternalThrowable
 import edu.giniapps.tmdb.models.response.Genre
 import edu.giniapps.tmdb.models.response.Movie
 import edu.giniapps.tmdb.models.response.Movie.Companion.NOW_PLAYING
 import edu.giniapps.tmdb.models.response.Movie.Companion.POPULAR
-import edu.giniapps.tmdb.models.response.MovieGenre
 import edu.giniapps.tmdb.utils.TmdbLogger
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.currentCoroutineContext
@@ -25,6 +25,7 @@ class DatasourceImpl @Inject constructor(
     private val tmdbLogger: TmdbLogger
 ) : DataSource {
 
+    // TODO: avoid repetitions
     override val popularMovies = movieDao.getPopularMovies().map {
         Result.success(it)
     }.catch { t ->
@@ -38,6 +39,14 @@ class DatasourceImpl @Inject constructor(
         currentCoroutineContext().cancel(null)
         emit(catchInFlow(t))
     }
+
+    /*override suspend fun getMovieById(id: Int) =
+        movieDao.getMovieById(id).map {
+            Result.success(it)
+        }.catch { t ->
+            currentCoroutineContext().cancel(null)
+            emit(catchInFlow(t))
+        }*/
 
     override suspend fun insertMovies(movies: List<Movie>) =
         performCatching {

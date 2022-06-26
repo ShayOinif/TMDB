@@ -1,6 +1,8 @@
-package edu.giniapps.tmdb.models.response
+package edu.giniapps.tmdb.models
 
 import androidx.room.*
+import edu.giniapps.tmdb.models.response.Genre
+import edu.giniapps.tmdb.models.response.Movie
 
 @Entity(tableName = "MOVIE_GENRE", primaryKeys = ["id", "genre_id"],
     foreignKeys = [

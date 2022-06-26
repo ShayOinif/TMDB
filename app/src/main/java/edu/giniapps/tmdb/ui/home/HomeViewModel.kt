@@ -9,11 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.lifecycle.HiltViewModel
 import edu.giniapps.tmdb.R
-import edu.giniapps.tmdb.models.MoviesCategoryItem
-import edu.giniapps.tmdb.models.TmdbBrokenThrowable
-import edu.giniapps.tmdb.models.TmdbNetworkThrowable
-import edu.giniapps.tmdb.models.TmdbServerThrowable
-import edu.giniapps.tmdb.models.response.MovieWithGenres
+import edu.giniapps.tmdb.models.*
 import edu.giniapps.tmdb.repository.Repository
 import edu.giniapps.tmdb.ui.home.HomeViewModel.MovieClickCallback
 import edu.giniapps.tmdb.ui.home.adapters.TMDBCategoryAdapter

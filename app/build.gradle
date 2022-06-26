@@ -16,7 +16,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "edu.giniapps.day23"
+        applicationId "edu.giniapps.tmdb"
         minSdk 23
         targetSdk 32
         versionCode 1
@@ -44,6 +44,9 @@ android {
 }
 
 dependencies {
+
+    // Android Jetpack Paging 3.0
+    implementation "androidx.paging:paging-runtime:3.2.0-alpha01"
 
     // KSP
     implementation("com.google.devtools.ksp:symbol-processing-api:1.7.0-1.0.6")
